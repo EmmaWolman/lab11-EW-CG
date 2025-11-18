@@ -1,3 +1,4 @@
+
 import math
 
 def square_root(a):
@@ -31,5 +32,5 @@ def logarithm(a, b):
     return math.log(b, a)
 
 def exponent(a, b):
-    return ab
+    return a ** b
 

@@ -10,13 +10,16 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
     # ##########################
 
-    ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self):
+        self.assertEqual(multiply(3, 7), 21)
+        self.assertEqual(multiply(-2, 4), -8)
+        self.assertEqual(multiply(-5, -6), 30)
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
-    # ##########################
+    def test_divide(self):
+        # remember: divide(a, b) returns b / a
+        self.assertEqual(divide(4, 20), 5)
+        self.assertEqual(divide(-3, 9), -3)
+        self.assertEqual(divide(2, -8), -4)
 
     ######## Partner 2
     # def test_divide_by_zero(self): # 1 assertion
@@ -32,24 +35,20 @@ class TestCalculator(unittest.TestCase):
     #     # use same technique from test_divide_by_zero
     #     fill in code
     # ##########################
-    
-    ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_log_invalid_argument(self):  # 1 assertion
+            self.assertRaises(ValueError, logarithm, 10, -1)
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
-    ##########################
+    def test_hypotenuse(self):
+        self.assertAlmostEqual(hypotenuse(5, 12), 13.0)
+        self.assertAlmostEqual(hypotenuse(8, 15), 17.0)
+        self.assertAlmostEqual(hypotenuse(-6, 8), 10.0)
+
+    def test_sqrt(self):
+        self.assertRaises(ValueError, square_root, -9)
+        self.assertAlmostEqual(square_root(4), 2.0)
+        self.assertAlmostEqual(square_root(16), 4.0)
+
 
 # Do not touch this
 if __name__ == "__main__":

@@ -1,3 +1,6 @@
+#https://github.com/EmmaWolman/lab11-EW-CG
+# Partner 1: Emma Wolman
+# Partner 2: Connor Gionet
 import unittest
 from calculator import *
 

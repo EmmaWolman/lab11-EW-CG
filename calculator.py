@@ -34,6 +34,9 @@ def logarithm(a, b):
         raise ValueError
     return math.log(a,b)
 
+def log(a, b):
+    return logarithm(a, b)
+
 def exp(a,b):
     return a**b
 
